@@ -1,0 +1,108 @@
+header{
+  height: 10vh;
+  background-color: rgb(99, 250, 250);
+  box-shadow: 0 0 10px rgb(97, 96, 96);
+  display: flex;
+  justify-content: space-between;
+}
+
+header h2{
+  margin: auto 1em;
+}
+
+header div {
+  margin-right: 1em;
+}
+
+.buttonAdd {
+  font-size: 3em;
+  color: #fff;
+  background-color: rgb(99, 250, 250);
+  border: none;
+  margin: auto;
+  outline: none;
+}
+
+.buttonAdd:hover{
+  background-color: rgb(99, 250, 250);
+}
+
+.buttonAdd:focus{
+  background-color: rgb(99, 250, 250);
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.cardList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card{
+  min-height: 300px;
+  padding: 1em;
+  margin: 2em;
+  box-shadow: 0 0 5px #888;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardButton{
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.cardButton:last-child{
+  margin-top: 0.5em;
+}
+
+.cardAlarm{
+  animation: animat .6s ease-in-out infinite;
+}
+
+.labelCheck{
+  margin: auto 1em !important;
+}
+
+#stopSend{
+  display: none;
+}
+
+.logsSend{
+  font-size: 12px;
+}
+
+.groupButton{
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete{
+  width: 21px;
+  height: 21px;
+}
+
+.chooseTime{
+  margin-bottom: 1em ;
+  padding: 0.5em;
+  border-color: #ced4da;
+  border-radius: 5px;
+}
+
+.chooseTime:focus{
+  border-color: #ced4da;
+  outline: none;
+}
+
+@keyframes animat {
+  0%{
+    background-color: rgb(247, 48, 48);
+  }
+  50%{
+    background-color: #fff;
+  }
+  100%{
+    background-color: rgb(247, 48, 48);
+  }
+
+}

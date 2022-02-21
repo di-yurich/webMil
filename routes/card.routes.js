@@ -5,6 +5,7 @@ const axios = require('axios')
 const rp = require('request-promise');
 const nodemailer = require("nodemailer");
 const cron = require('node-cron');
+const config = require('config')
 
 router.post('/add-card', async (req, res) => {
     
@@ -60,8 +61,8 @@ router.post('/send', async (req, res) => {
             port: 25,
             secure: false, // true for 465, false for other ports
             auth: {
-                user: "csoc@mil.gov.ua",
-                pass: "21846f55fbb351884cfa20da8d3dd178cd5e16da8e9eaa4b35bf39842a48ec32_", 
+                user: config.get('email'),
+                pass: config.get('emailPass'), 
             },
         });
         let mailOptions = {
